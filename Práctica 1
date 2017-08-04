@@ -1,0 +1,84 @@
+# A.R.1
+#Práctica 1
+#Análisis de regresión
+#Mónica Gutiérrez Vieyra
+#04082017
+
+#R como calculadora
+a<- 4
+b<- 3
+suma<-a+b
+suma
+
+#R con operaciones comparación
+
+a>b # a es mayor que b?
+a>=b # a es mayor o igual que b
+a<b
+a<=b
+a==b
+a==4
+a!=b
+
+
+## concepto de función
+
+x<- abs(-2.5) ##abs es la función del valor absoluto
+x
+help(abs)
+#pedir ayuda en R
+help (abs)
+
+#####################################################
+
+#para asignar valores a variables en R se usa una <-
+
+x<- "Hola" ####variable tipo caracter
+z<- 6 #el igual solo funciona en una sola direccion
+
+
+
+ciudad<- "Toluca" # una entrada
+nombres<- c("Karla","Rodrigo","Miguel","Samuel") #caracter  y 4 entradas
+edad<- c(28,17,49,31) # numérico y 4 entradas
+
+
+#se utiliza la función classs para preguntar a R qué tipo de variable es
+
+class(nombres)
+class(edad)
+
+
+base1<-data.frame(nombres,edad) #se crea una base de datos
+View(base1) #ver la base de datos
+ls(base1) #var la lisyta de variables de base 1
+
+base1$edad #para conocer los datos de la varibale 
+           #edad de la base1
+
+
+#ejercicio: crear una variable de nombre Sexo con 4 entradas
+#donde hombre es 1 y mujer es el valor 2
+#la primera entrada es mujer y las otras 3 son hombres
+#después de crear esta variable genenrar una nueva base de nombre base2 con 3 variables
+#nombres, edad y sexo
+
+sexo<-c(2,1,1,1)
+base2<-data.frame(nombres,edad,sexo)
+base2
+View (base2)
+table(base2$sexo)
+table(base2$edad)
+
+palumnos<-c(40,120,60,80) #alumnos fac economía
+etiq<-c("actuaría","economía","relaciones ec","negocios int")
+help(pie)
+pie(palumnos)
+pie(palumnos,etiq)
+
+pie(palumnos, etiq, main= 
+"Gráfica de pie de
+la facultad de economía", sub= "Fuente: Facultad de Economía",
+col= c("blue","red","pink","yellow"),
+radius = 1, clockwise = TRUE,lty=20
+)
